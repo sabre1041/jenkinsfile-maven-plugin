@@ -4,7 +4,7 @@
 
 	<groupId>com.andyserver.maven.plugins</groupId>
 	<artifactId>jenkinsfile-maven-plugin</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>maven-plugin</packaging>
 
 	<name>Jenkinsfile Maven Plugin</name>
