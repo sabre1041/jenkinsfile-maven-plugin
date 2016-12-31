@@ -124,11 +124,11 @@ public class ValidateJenkinsfileMojo extends AbstractMojo {
                 if (statusCode != HttpStatus.SC_OK) {
 
                     if (statusCode == HttpStatus.SC_NOT_FOUND) {
-                        throw new MojoExecutionException(
-                                "Jenkinsfile Validation Endpoint Not Found. Please Confirm Plugin Installed");
+                        throw new MojoExecutionException(String.format(
+                                "%n%nJenkinsfile validation REST endpoint not found on Jenkins server (%s).%nPlease confirm that the pipeline-model-definition plugin is installed.", server));
                     }
 
-                    throw new MojoExecutionException("Invalid HTTP Response: " + statusCode);
+                    throw new MojoExecutionException(String.format("%n%nInvalid HTTP response code: %s.%nPlease note that Jenkins may return a 403 even if your credentials are incorrect, which would normally result in a 401.", statusCode));
                 }
 
                 String response = EntityUtils.toString(httpResponse.getEntity());
