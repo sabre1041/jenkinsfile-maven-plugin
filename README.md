@@ -1,6 +1,9 @@
 jenkinsfile-maven-plugin
 ========================
 
+ [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.andyserver.maven.plugins/jenkinsfile-maven-plugin/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/com.andyserver.maven.plugins/jenkinsfile-maven-plugin)
+
+
 Maven plugin the validate the syntax of a [Jenkinsfile](https://jenkins.io/doc/book/pipeline/jenkinsfile/)
 
 ## Overview
